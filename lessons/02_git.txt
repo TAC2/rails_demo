@@ -1,2 +1,27 @@
 Git (Source Code Management)
 
+/**	Initilize Git
+	git init
+
+/** Pack everything in the current directory
+	git add .
+
+/**	List the status of the pack
+	git status
+
+/**	Commit the pack to the server
+	git commit -m "Message"
+
+/** Rollback to the last commited version
+	git checkout -f
+
+/** Rigister with GitHub on the Internet
+	1. Go to github.com
+	2. Sign up and then sign in
+	3. Go to Account
+	4. SSH Keys
+	5. Generate SSH Keys
+		- Linux		: Follow the instruction on the site
+		- Windows	: Install the git for windows
+	6. Add the SSH Key
+	

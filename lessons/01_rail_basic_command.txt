@@ -1,0 +1,53 @@
+Rails Association
+
+Zombie has many weapon
+Zombie has one brain
+
+
+
+rails g scaffold zombie name
+rails g scaffold weapon name, power:int, zombie:references
+rails g scaffold weapon name, power:int, zombie:belongs_to
+
+
+Model Generated:
+class Weapon < ActiveRecord::Base
+	belongs_to :zombie
+end
+
+class Zombie < ActiveRecord::Base
+
+end
+
+What we need to add to Zombie class manually:
+class Zombie < ActiveRecord::Base
+	has_many :weapons	# zombie has many weapons
+	has_one :brain		# zombie has one brain
+end
+
+Student has many classes
+Student has many teachers
+Teacher has many classes
+Teacher has many students
+
+class Student < ActiveRecord::Base
+	has_many :classes
+	has_many :teachers, through: :class
+end
+
+class Teacher < ActiveRecord::Base
+	has_many :classes
+	has_many :students, through: :class
+end
+
+Student has many subjects
+Subject has many students
+
+class Student < ActiveRecord::Base
+	has_and_belongs_to_many :subjects
+end
+
+class Subject < ActiveRecord::Base
+	has_and_belongs_to_many :students
+end
+
