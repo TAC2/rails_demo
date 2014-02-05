@@ -25,3 +25,43 @@ Git (Source Code Management)
 		- Windows	: Install the git for windows
 	6. Add the SSH Key
 	
+/** Create Repository in GitHub
+	1. Login to github
+	2. Click on the plus sign on the top right corner
+	3. Click on New Repository
+	4. Enter the repository name
+	5. Click on Create Repository
+
+/** Add remote stream for upload repository project to github server
+	git remote add origin https://github.com/owner_username/repository_name.git
+
+/**	List our remote upstram
+	git remote -v
+
+/** Remove remote upstream
+	git remote rm origin
+
+/** 
+	fork = dupplicate, clone
+	pull-request = make changes to the original repository
+
+	git clone https://github.com/owner_username/repository_name.git
+
+/** 
+	fetch = download but not merge
+	pull = download and auto merge
+
+/** Add Remote Upstream
+	git remote add other_username https://github.com/other_username/repository_name.git
+
+/** Download that pull request from the other user
+	git fetch other_username
+	
+/** List Brand
+	git branch -va
+
+/** Merge the pull request
+	git merge remote_upstream_name/brand_name
+
+/** List changes
+	git status
